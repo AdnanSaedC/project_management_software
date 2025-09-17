@@ -1,0 +1,38 @@
+PRD its nothing but project requirement document
+
+figuring it what we are trying to build and where to stop
+
+we are going to build project management plateform like jira
+
+
+let setup a project
+
+using npm init
+you can modify everything later on
+
+you will get a package.json
+
+i have changed the script and add Dev element in that script object of package.json
+in order to run the we have to type npm run dev
+
+we your syntax has require then in the typr section of package.json 
+add commonjs 
+and if you want to work with import go with modules
+
+i prefer modules
+
+
+prettier inclusion
+look we have installed prettier in order to make the entire code
+look smooth and readable 
+
+npx prettier . --write
+
+you have to run this command in order to initialize and it will do the job
+
+npx prettier . --check
+this is to make changes 
+
+"useTabs" : false,
+this means dont use tabs for indexation prefer spaces
+check .prettierc file for more info
