@@ -36,3 +36,108 @@ this is to make changes
 "useTabs" : false,
 this means dont use tabs for indexation prefer spaces
 check .prettierc file for more info
+
+now downloading autoserver
+popular options are nodemon and node --watch
+
+and update the dev element in script for future reference
+or safe side add another element by different name
+
+hot refresh,hot reloading,hot module reloading
+these are couple of name os keeping our server on auto run
+like it will run as on its own as soon as it detect changes
+
+
+now work with .env files
+this is done to protect the important information
+
+env is nothing but environment variable
+
+lets understand what is happening
+the server(hardware ) is very much secure and our server code is a
+process running in the server 
+
+what we want is our important credentials get the security of the server
+
+so we keep our important in env file
+
+this is the flow
+
+client -> server{ (server code),remaining proces and storage}
+
+if the server process needs important infop it will get that from env variable and
+it will reply back
+
+to install run npm i dotenv
+
+it is install in Dependencies section not devDependencies
+which clearly indicates that its mandatory to run the application
+
+devDependencies are not required in deployement environment
+
+project structure which i have followed
+public
+    public data like logo
+    create an file inside this (.gitkeep) in order to push the folder
+    in github
+    because git ignores empty files
+scr 
+    controllers - logic
+    db
+    middlewares(they are between request and server)
+    models(it deals with the structure of the data in the database)
+    routes(routing info like post/....)
+    utils(things which can be reused like sending mails)
+    validator(those function which validates the data)
+
+
+now express part 
+there are two main components of an application
+1 - server how routing takes place
+2 - database how data is being stored and retreived
+
+we are going with expresss for server and for the database
+we are going with mongodb through mongoose(there just makes our life easier)
+
+express <-> mongoose(contain mongodb)
+
+few ways to install these packages
+npm i packageName@latest
+npm i packageName@versionNumber
+
+
+lets learn about HTTP 
+hypertext transfer protocol
+get - request is a resource from server
+post - sending a resource to the server
+put - replace the resource(update) new information
+patch - replace just a part of information
+delete - requesting serevr to delete something
+
+
+since we are using index.js as main entry point
+it is better to have pure html css and javascript here
+
+
+CORS error
+cross origin resource sharing error
+nowadays the frontend lives in separate environment such as versal,aws etc
+
+and backend lives somewhere else
+and the browser doesn't allow to communcicate changes in top the backend
+like certain changes like portno change,syubdoain change etc
+
+so it is the job of backend developer to handle that
+
+so you to configure express for that using express.use
+which acts as a middlewares between req and server
+
+
+lets standarized(server response and error)
+standarized is nothing but predictable format{
+    status code,
+    data
+}
+
+you know what nodejs has a standarized ways of handling errors
+but not the response
