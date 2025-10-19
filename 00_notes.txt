@@ -120,6 +120,9 @@ it is better to have pure html css and javascript here
 
 
 CORS error
+its just deals with who can conatct the server
+in our case * means everyone
+
 cross origin resource sharing error
 nowadays the frontend lives in separate environment such as versal,aws etc
 
@@ -129,7 +132,7 @@ like certain changes like portno change,syubdoain change etc
 
 so it is the job of backend developer to handle that
 
-so you to configure express for that using express.use
+so you have to configure express for that using express.use
 which acts as a middlewares between req and server
 
 
@@ -141,3 +144,23 @@ standarized is nothing but predictable format{
 
 you know what nodejs has a standarized ways of handling errors
 but not the response
+
+now lets connect the application to the database
+mongodb
+
+here the appproach we are taking is our sever will live outside the system
+mongodb atlas
+
+the flow is our system -> mongoose -> mongodb
+here mongoose is an odm
+object document mapper
+which makes our job easier
+the word document used here since the structure is flexible
+
+
+the flow is you write all the logics in controllers
+then you write all the endpoints which are allowed
+then you write the basic version of end points in app.js
+
+app.js(chatgpt.com) -> route.js contains which logic after which /
+controllers contains that logic
