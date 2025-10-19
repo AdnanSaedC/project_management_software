@@ -145,6 +145,9 @@ standarized is nothing but predictable format{
 you know what nodejs has a standarized ways of handling errors
 but not the response
 
+//saving constants
+database can live in or out of this server
+
 now lets connect the application to the database
 mongodb
 
