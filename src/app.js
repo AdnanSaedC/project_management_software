@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import healthCheckFromRouterFolder from "./routes/healthcheck.route.js"
+import cookieParser from "cookie-parser";
 //we have named it diffrently here
 
 
@@ -26,6 +26,7 @@ app.use(express.static("public"));
 //this is to handle the encoded data which comes from forms etc
 //extended means that we can handle nested objects or complex objects
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
+app.use(cookieParser())
 
 //cors configuration
 app.use(
@@ -37,6 +38,7 @@ app.use(
     }),
 );
 
+import healthCheckFromRouterFolder from "./routes/healthcheck.route.js"
 //routing allowed
 app.use("/api/v1/healthcheck",healthCheckFromRouterFolder)
 //look here we are using app.use 
@@ -49,6 +51,10 @@ app.use("/api/v1/healthcheck",healthCheckFromRouterFolder)
  * u can also do some calculations if you want inside get no one is stopping u
  */
 
+
+
+import authRoute from "../src/routes/auth.route.js"
+app.use("/api/v1/auth",authRoute);
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });

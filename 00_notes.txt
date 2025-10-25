@@ -167,3 +167,75 @@ then you write the basic version of end points in app.js
 
 app.js(chatgpt.com) -> route.js contains which logic after which /
 controllers contains that logic
+
+###############################
+lets write database schema
+in models
+
+the syntax which we are working is filename.folder.js
+
+
+###############################
+JSON web token
+this will help us to keep the user authenticated in our plateform
+
+everytime when a client makes a request we want to authenticate who he is
+so what we does it is we create a json token and it is send everytime
+the client sends the request
+
+json web token consist of theree things
+header.payload.signature
+
+headerr contain an object which the type of algorithm and type of format
+which is json
+
+
+what is token
+it is a string
+
+types of token
+without data
+        this is nothing but otp mechanisms you generate a string
+        two copies one in database and one sent to the user
+        and then asks the user to send the data back if it matches allows them to make
+        changes
+
+with data
+        here we have another two types of token based on their expiry
+        access token -> they lived for a very short period of time
+        refersh token -> they live for longer amount of time
+
+this is how tokens with data works
+
+for a user you generate two token access and refresh
+serevr has only referesh token
+user has both referesh and access token
+
+whenever a user wants to communcicate it communcicates with access tokens
+since access token are short lived when a user communcicates with an expired
+token server sends a special response and ask for refresh token in the server
+
+the user sends a refresh token using that we match it in server
+if they are matched then a new access token gets generated which is send to
+the user and now the can communcicates with the server
+ 
+
+########################################################
+now it time tocreate email template
+for user verification
+
+#############
+lets a register a user
+in order to save a new user
+we have to generate access token, refresh token, without data token , then verification mails
+then sending the response which user 
+
+
+
+######
+middlewares are function which runs when data flows from one system to another
+
+express dont allow cookies in general
+
+###every request which recahes the server should have an access token
+we can do this either using cookies or header since cookies are not avilable in mobiles

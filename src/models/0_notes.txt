@@ -1,0 +1,5 @@
+here we have planned to keep the structure of the data
+in this folder
+
+schema is nothing but strucrture
+
