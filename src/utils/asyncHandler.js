@@ -8,6 +8,10 @@
  *      preventing the app from getting crashed
  */
 
+/* it takes the function as parameter and returns anothert function as parameter
+if next() is called likem this control goes to next middleware
+**/
+
 const asyncHandler = (requestHandler)=>{
     return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next))
